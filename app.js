@@ -2,8 +2,8 @@
   'use strict';
 
   /* ---------- Supabase ---------- */
-  const SUPABASE_URL = 'https://aylluvpxgnkvrgfmqtfw.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5bGx1dnB4Z25rdnJnZm1xdGZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI3NDMxOTIsImV4cCI6MjA5ODMxOTE5Mn0.RxeKVnqwUN9rMiDSFPmnEeCqexjwFEZTR2upIe-1yp4';
+  const SUPABASE_URL = 'https://ruwndgtsequulazlbfhd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1d25kZ3RzZXF1dWxhemxiZmhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4NDQzODgsImV4cCI6MjEwNjQyMDM4OH0.Zr40UqML2IWekO7W7Fp0QTF5Zr8y3KMW08MEytKfNPA';
   const sb = window.supabase?.createClient ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
   /* ---------- Helpers ---------- */
