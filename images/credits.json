@@ -1,0 +1,261 @@
+{
+  "dal": {
+    "src": "images/dal.jpg",
+    "article": "Dal tadka.JPG",
+    "author": "Renupradhul",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Dal_tadka.JPG"
+  },
+  "rice": {
+    "src": "images/rice.jpg",
+    "article": "Jeera bhaat",
+    "author": "Sonia Goyal",
+    "license": "CC BY-SA 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Jeera-rice.JPG"
+  },
+  "aloo": {
+    "src": "images/aloo.jpg",
+    "article": "Aloo gobhi",
+    "author": "Sapanabehl",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Aloo_Ghobi.jpg"
+  },
+  "roti": {
+    "src": "images/roti.jpg",
+    "article": "Roti",
+    "author": "Famartin",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:2020-05-08_19_34_28_Chapati_being_made_in_a_pan_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+  },
+  "dosa": {
+    "src": "images/dosa.jpg",
+    "article": "Dosa (food)",
+    "author": "Vee Satayamas from Bangkok, Thailand",
+    "license": "CC BY 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg"
+  },
+  "khichdi": {
+    "src": "images/khichdi.jpg",
+    "article": "Khichdi",
+    "author": "Rpande",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Dall_Khichdi.jpg"
+  },
+  "paneer-butter": {
+    "src": "images/paneer-butter.jpeg",
+    "article": "Paneer makhani",
+    "author": "Charvi Kakwani",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Paneer_Makhani_Veggie.jpeg"
+  },
+  "palak-paneer": {
+    "src": "images/palak-paneer.jpg",
+    "article": "Palak paneer",
+    "author": "Lopanayak",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg"
+  },
+  "chole": {
+    "src": "images/chole.jpg",
+    "article": "Chana masala",
+    "author": "Simon Law (sfllaw) from Montréal, QC, Canada",
+    "license": "CC BY-SA 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Chana_masala.jpg"
+  },
+  "rajma": {
+    "src": "images/rajma.jpg",
+    "article": "Rajma",
+    "author": "Gaurav Nemade",
+    "license": "CC BY-SA 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Rajma_Masala_(32081557778).jpg"
+  },
+  "aloo-paratha": {
+    "src": "images/aloo-paratha.jpg",
+    "article": "Paratha",
+    "author": "Nithyasrm",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Triangle_paratha_(cropped).JPG"
+  },
+  "poha": {
+    "src": "images/poha.jpg",
+    "article": "Flattened rice",
+    "author": "Sanjay Acharya, aka Sanjay ach at en.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Poha.jpg"
+  },
+  "upma": {
+    "src": "images/upma.jpg",
+    "article": "Upma",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:A_photo_of_Upma.jpg"
+  },
+  "idli": {
+    "src": "images/idli.jpg",
+    "article": "Idli",
+    "author": "Soumya dey at English Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Idli_Sambar.JPG"
+  },
+  "biryani": {
+    "src": "images/biryani.jpg",
+    "article": "Biryani",
+    "author": "Mahi Tatavarty",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:%22Hyderabadi_Dum_Biryani%22.jpg"
+  },
+  "pav-bhaji": {
+    "src": "images/pav-bhaji.jpg",
+    "article": "Pav bhaji",
+    "author": "Rupali Banarase",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Bambayya_Pav_bhaji.jpg"
+  },
+  "bhindi": {
+    "src": "images/bhindi.jpg",
+    "article": "Bhindi Masala.jpg",
+    "author": "Monali.mishra",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Bhindi_Masala.jpg"
+  },
+  "curd-rice": {
+    "src": "images/curd-rice.jpg",
+    "article": "Curd rice",
+    "author": "Sudharshan Shanmugasundaram",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg"
+  },
+  "dhokla": {
+    "src": "images/dhokla.jpg",
+    "article": "Khaman",
+    "author": "Devmanoj",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:SPECIAL_SURATI_KHAMAN.jpg"
+  },
+  "kheer": {
+    "src": "images/kheer.jpg",
+    "article": "Kheer",
+    "author": "stu spivack",
+    "license": "CC BY-SA 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Kheer.jpg"
+  },
+  "chai": {
+    "src": "images/chai.jpg",
+    "article": "Masala chai",
+    "author": "Dadhichbittu007",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Chai_In_Sakora.jpg"
+  },
+  "mango-lassi": {
+    "src": "images/mango-lassi.jpg",
+    "article": "Mango lassi at Everest Dine in November 2022.jpg",
+    "author": "JIP",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Mango_lassi_at_Everest_Dine_in_November_2022.jpg"
+  },
+  "chaas": {
+    "src": "images/chaas.jpg",
+    "article": "Chaas",
+    "author": "Nitin",
+    "license": "CC BY-SA 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Mint_lassi.jpg"
+  },
+  "nimbu-pani": {
+    "src": "images/nimbu-pani.jpg",
+    "article": "Shikanji",
+    "author": "Kanikatwl",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Shikanji-_served_with_pomegranate,grated_apple_and_mint.jpg"
+  },
+  "filter-coffee": {
+    "src": "images/filter-coffee.jpg",
+    "article": "Indian filter coffee",
+    "author": "Vallari.a",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Filter_kaapi.JPG"
+  },
+  "badam-milk": {
+    "src": "images/badam-milk.jpg",
+    "article": "Almond milk",
+    "author": "Amazing Almonds",
+    "license": "CC BY 2.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Home-made_almond_milk,_November_2012.jpg"
+  },
+  "aam-panna": {
+    "src": "images/aam-panna.jpg",
+    "article": "Aam panna",
+    "author": "Miansari66",
+    "license": "CC0",
+    "file": "https://commons.wikimedia.org/wiki/File:Keri_Ka_Sharbat.JPG"
+  },
+  "thandai": {
+    "src": "images/thandai.jpg",
+    "article": "Thandai",
+    "author": "Aparna Balasubramanian",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Thandai_(Spiced_Indian_Milk_Drink).JPG"
+  },
+  "rose-sharbat": {
+    "src": "images/rose-sharbat.jpg",
+    "article": "Sharbat (drink)",
+    "author": "fa:User:دانقولا",
+    "license": "Public domain",
+    "file": "https://commons.wikimedia.org/wiki/File:Sharbat.JPG"
+  },
+  "gulab-jamun": {
+    "src": "images/gulab-jamun.jpg",
+    "article": "Gulab jamun",
+    "author": "Sapra5379",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Gulab-jamun-wallpaper-1.jpg"
+  },
+  "gajar-halwa": {
+    "src": "images/gajar-halwa.jpg",
+    "article": "Gajar ka halwa",
+    "author": "AmanAgrahari01",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Cuisine_(268)_44.jpg"
+  },
+  "rasmalai": {
+    "src": "images/rasmalai.jpg",
+    "article": "Ras malai",
+    "author": "Shaharbano",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Ras_Malai_2.JPG"
+  },
+  "sooji-halwa": {
+    "src": "images/sooji-halwa.jpg",
+    "article": "Suji ka halwa",
+    "author": "Munni Akter Mim",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:%E0%A6%B8%E0%A7%81%E0%A6%9C%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%B2%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE.jpg"
+  },
+  "kulfi": {
+    "src": "images/kulfi.jpg",
+    "article": "Kulfi",
+    "author": "Commoner247",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Matka_kulfi.jpg"
+  },
+  "besan-ladoo": {
+    "src": "images/besan-ladoo.jpg",
+    "article": "Laddu",
+    "author": "Nandhinikandhasamy",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Laddu_Sweet.JPG"
+  },
+  "shrikhand": {
+    "src": "images/shrikhand.jpg",
+    "article": "Shrikhand",
+    "author": "Secretlondon",
+    "license": "CC BY-SA 3.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Shrikhand_london_kastoori.jpg"
+  },
+  "payasam": {
+    "src": "images/payasam.jpg",
+    "article": "Semiya payasam, Alappuzha.jpg",
+    "author": "Vis M",
+    "license": "CC BY-SA 4.0",
+    "file": "https://commons.wikimedia.org/wiki/File:Semiya_payasam,_Alappuzha.jpg"
+  }
+}
