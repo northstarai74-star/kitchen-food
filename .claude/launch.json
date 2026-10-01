@@ -4,13 +4,13 @@
     {
       "name": "kitchen-memory",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "5500"],
+      "runtimeArgs": ["-m", "http.server", "5500", "-d", "public"],
       "port": 5500
     },
     {
       "name": "kitchen-food",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["--env-file-if-exists=.env", "server.js", "5501"],
+      "runtimeArgs": ["--env-file-if-exists=.env", "dev-server.js", "5501"],
       "port": 5501
     }
   ]

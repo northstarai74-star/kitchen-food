@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Kitchen Food: family recipe notebook, week planner and shopping list.",
   "scripts": {
-    "start": "node --env-file-if-exists=.env server.js"
+    "start": "node --env-file-if-exists=.env dev-server.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0"
