@@ -492,6 +492,7 @@
   });
 
   /* ---------- Dish dialog ---------- */
+  let capturedImage = null;
   function openDish(id = null) {
     const d = id ? getDish(id) : null;
     $('#dishId').value = d?.id || '';
@@ -514,12 +515,105 @@
     $('#dishQuick').checked = !!d?.tags.includes('quick');
     $('#dishLoved').checked = !!d?.tags.includes('loved');
     $('#deleteDishButton').hidden = !d;
+    capturedImage = d?.img || null;
+    $('#capturedImage').value = '';
+    $('#capturePrompt').hidden = !!d;
     aiDraft = null;
     setAiStatus('');
     $('#aiFillButton').textContent = d ? '✨ Rewrite with AI' : '✨ Write with AI';
     $('#dishModal').showModal();
     if (!d) $('#dishName').focus();
   }
+
+  async function capturePhoto() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false });
+      const video = document.createElement('video');
+      video.srcObject = stream;
+      video.play();
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+
+      const overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px';
+
+      const videoContainer = document.createElement('div');
+      videoContainer.style.cssText = 'width:100%;max-width:500px;aspect-ratio:1;background:#000;border-radius:20px;overflow:hidden';
+      video.style.cssText = 'width:100%;height:100%;object-fit:cover';
+      videoContainer.appendChild(video);
+
+      const btnContainer = document.createElement('div');
+      btnContainer.style.cssText = 'display:flex;gap:10px;justify-content:center';
+
+      const captureBtn = document.createElement('button');
+      captureBtn.textContent = '📸 Capture';
+      captureBtn.style.cssText = 'padding:12px 24px;background:#e27c52;color:#1d130d;border:none;border-radius:999px;font-weight:600;cursor:pointer;font-size:16px';
+
+      const cancelBtn = document.createElement('button');
+      cancelBtn.textContent = 'Cancel';
+      cancelBtn.style.cssText = 'padding:12px 24px;background:transparent;color:#fff;border:1px solid #fff;border-radius:999px;font-weight:600;cursor:pointer;font-size:16px';
+
+      btnContainer.appendChild(captureBtn);
+      btnContainer.appendChild(cancelBtn);
+      overlay.appendChild(videoContainer);
+      overlay.appendChild(btnContainer);
+      document.body.appendChild(overlay);
+
+      let captured = false;
+
+      captureBtn.addEventListener('click', () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        ctx.drawImage(video, 0, 0);
+        capturedImage = canvas.toDataURL('image/jpeg');
+        $('#capturedImage').value = capturedImage;
+        $('#dishPhoto').hidden = false;
+        $('#dishPhotoImg').src = capturedImage;
+        $('#dishPhotoImg').alt = 'Captured photo';
+        $('#dishPhotoCredit').innerHTML = '';
+        $('#capturePrompt').hidden = true;
+        captured = true;
+        stream.getTracks().forEach(track => track.stop());
+        overlay.remove();
+      });
+
+      cancelBtn.addEventListener('click', () => {
+        stream.getTracks().forEach(track => track.stop());
+        overlay.remove();
+      });
+    } catch (err) {
+      toast('Camera access denied or not available. Try again.');
+    }
+  }
+
+  $('#capturePhotoButton').addEventListener('click', capturePhoto);
+
+  function updateSpiceFieldVisibility() {
+    const type = document.querySelector('input[name="dishType"]:checked')?.value || 'main';
+    $('#spiceField').hidden = (type !== 'main');
+  }
+
+  $$('input[name="dishType"]').forEach(radio => {
+    radio.addEventListener('change', updateSpiceFieldVisibility);
+  });
+
+  const originalOpenDish = openDish;
+  openDish = function(id = null) {
+    originalOpenDish.call(this, id);
+    const d = id ? getDish(id) : null;
+    if (!d) {
+      document.getElementById('typeMain').checked = true;
+      updateSpiceFieldVisibility();
+    } else {
+      const isDesssert = d.tags?.includes('dessert');
+      const isDrink = d.tags?.includes('drink');
+      if (isDesssert) document.getElementById('typeDessert').checked = true;
+      else if (isDrink) document.getElementById('typeDrink').checked = true;
+      else document.getElementById('typeMain').checked = true;
+      updateSpiceFieldVisibility();
+    }
+  };
 
   /* ---------- AI recipe writer (server.js → Claude) ---------- */
   let aiDraft = null;       // { description, category } from the last AI reply, used when saving
@@ -590,15 +684,18 @@
     const id = $('#dishId').value || `dish-${Date.now()}`;
     const old = getDish(id);
     const notes = $('#dishNotes').value.trim(), method = $('#dishMethod').value.trim();
+    const dishType = document.querySelector('input[name="dishType"]:checked')?.value || 'main';
+    const spice = dishType === 'main' ? $('#dishSpice').value : '';
     const dish = {
       id, name,
       hue: old ? old.hue : dishes.length % 6,
       servings: $('#dishServings').value.trim(),
-      spice: $('#dishSpice').value,
+      spice: spice,
       ingredients: $('#dishIngredients').value.split('\n').map(s => s.trim()).filter(Boolean),
       method, notes,
       description: aiDraft?.description || (old?.description && old.notes === notes ? old.description : (notes || method || 'A dish saved in your household notebook.')),
-      tags: [...new Set([...(old?.tags || []).filter(t => t !== 'quick' && t !== 'loved'), ['dessert', 'drink'].includes(aiDraft?.category) && aiDraft.category, $('#dishQuick').checked && 'quick', $('#dishLoved').checked && 'loved'].filter(Boolean))]
+      tags: [...new Set([...(old?.tags || []).filter(t => t !== 'quick' && t !== 'loved' && t !== 'dessert' && t !== 'drink'), dishType !== 'main' && dishType, aiDraft?.category && ['dessert', 'drink'].includes(aiDraft.category) && aiDraft.category, $('#dishQuick').checked && 'quick', $('#dishLoved').checked && 'loved'].filter(Boolean))],
+      ...(capturedImage && { img: capturedImage })
     };
     dishes = old ? dishes.map(d => d.id === id ? dish : d) : [dish, ...dishes];
     save(); renderAll();

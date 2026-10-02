@@ -332,10 +332,23 @@
           <img id="dishPhotoImg" alt="" />
           <figcaption id="dishPhotoCredit"></figcaption>
         </figure>
+        <div id="capturePrompt" class="field" hidden>
+          <p class="hint">📸 Take a photo of this dish</p>
+          <button type="button" class="btn btn-soft btn-sm" id="capturePhotoButton">Take photo</button>
+        </div>
+        <input type="hidden" id="capturedImage" />
         <label class="field">Dish name<input id="dishName" required placeholder="e.g. Amma's dal" /></label>
+        <div class="field">
+          <label>Type</label>
+          <div class="toggles">
+            <label class="toggle"><input type="radio" name="dishType" value="main" id="typeMain" checked /><span>Main dish</span></label>
+            <label class="toggle"><input type="radio" name="dishType" value="dessert" id="typeDessert" /><span>Dessert</span></label>
+            <label class="toggle"><input type="radio" name="dishType" value="drink" id="typeDrink" /><span>Beverage</span></label>
+          </div>
+        </div>
         <div class="field-row">
           <label class="field">Serves<input id="dishServings" placeholder="4 people" /></label>
-          <label class="field">Spice<select id="dishSpice"><option>Gentle</option><option>Medium</option><option>Hot</option><option>As we like it</option></select></label>
+          <label class="field" id="spiceField"><span>Spice</span><select id="dishSpice"><option>Gentle</option><option>Medium</option><option>Hot</option><option>As we like it</option></select></label>
         </div>
         <div class="field">
           <div class="field-head">
